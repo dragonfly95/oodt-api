@@ -37,7 +37,7 @@ spring:
     show-sql: true
 
     # none, update, validate, create, create-drop
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
 
     generate-ddl: false
 
@@ -48,4 +48,7 @@ spring:
         use_sql_comments: true
 
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-        default_batch_fetch_size: 1000
+
+  properties:
+    hibernate:
+      default_batch_fetch_size: 1000
