@@ -36,7 +36,8 @@ spring:
     database: mysql
     show-sql: true
 
-    hibernate.ddl-auto: update
+    # none, update, validate, create, create-drop
+    hibernate.ddl-auto: create
 
     generate-ddl: false
 
