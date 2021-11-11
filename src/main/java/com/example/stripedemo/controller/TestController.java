@@ -1,4 +1,4 @@
-package com.example.stripedemo;
+package com.example.stripedemo.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
