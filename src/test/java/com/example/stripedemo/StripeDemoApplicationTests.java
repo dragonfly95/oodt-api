@@ -9,6 +9,7 @@ import com.example.stripedemo.entity.Team;
 import com.example.stripedemo.entity.TeamMember;
 import com.example.stripedemo.repository.ParentRepository;
 import com.example.stripedemo.repository.PostRepository;
+import com.example.stripedemo.repository.TeamRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -33,6 +34,9 @@ class StripeDemoApplicationTests {
 	@Autowired
 	private ParentRepository parentRepository;
 
+	@Autowired
+	private TeamRepository teamRepository;
+
 	@Test
 	@Transactional
 	@Rollback(false)
@@ -54,8 +58,8 @@ class StripeDemoApplicationTests {
 //		List<Post> posts = postRepository.findByComments_id(14L);
 //		posts.forEach(post -> System.out.println("post = " + post));
 
-		selectTeam();
-
+//		selectTeam();
+		List<Team> all = teamRepository.findAll();
 		System.out.println(" 1=1 ");
 	}
 
