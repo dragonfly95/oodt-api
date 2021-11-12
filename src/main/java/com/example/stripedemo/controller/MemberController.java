@@ -47,7 +47,7 @@ public class MemberController {
     
     @GetMapping("parent")
     public List<Parent> getParent() {
-    	return parentRepository.findAll();
+    	return parentRepository.findParents();
     }
     
 }
