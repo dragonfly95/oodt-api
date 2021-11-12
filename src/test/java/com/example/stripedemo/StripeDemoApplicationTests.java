@@ -40,10 +40,14 @@ class StripeDemoApplicationTests {
 //
 //		insertPost();
 
+		/*
 		List<Parent> parents = parentRepository.findParents();
 		parents.forEach(parent -> System.out.println(parent));
 		List<ParentVO> collect = parents.stream().map(ParentVO::new).collect(Collectors.toList());
 		collect.forEach(parentVO -> System.out.println("parentVO = " + parentVO));
+		*/
+		List<Post> posts = postRepository.findAll();
+		posts.forEach(post -> System.out.println("post = " + post));
 	}
 
 	private void insertPost() {

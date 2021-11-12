@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.example.stripedemo.entity.Post;
+import com.example.stripedemo.repository.PostRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +28,9 @@ public class MemberController {
     private final MemberRepository memberRepository;
 
     private final ParentRepository parentRepository;
-    
+
+    private final PostRepository postRepository;
+
     @GetMapping("member")
     public List<MemberEntity> getMembers() {
         return memberRepository.findAll();
@@ -49,5 +53,9 @@ public class MemberController {
     public List<Parent> getParent() {
     	return parentRepository.findParents();
     }
-    
+
+    @GetMapping("post")
+    public List<Post> getPost() {
+        return postRepository.findAll();
+    }
 }
