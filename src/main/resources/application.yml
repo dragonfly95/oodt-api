@@ -1,6 +1,11 @@
 
 
 spring:
+
+#  test:
+#    database:
+#      replace: none
+
   mvc:
     static-path-pattern: /static/**
 
